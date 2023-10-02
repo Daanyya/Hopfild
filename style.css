@@ -1,0 +1,72 @@
+:root {
+  --PIXEL_SIZE: 50;
+  --PIXEL_COUNT: 5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#input, #output {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: calc(var(--PIXEL_SIZE) * var(--PIXEL_COUNT) * 1px + ((var(--PIXEL_COUNT) - 1) * 2px));
+  height: calc(var(--PIXEL_SIZE) * var(--PIXEL_COUNT) * 1px + ((var(--PIXEL_COUNT) - 1) * 2px));
+  margin-right: 25px;
+  background-color: #eeeeee;
+}
+
+.pixel {
+  width: calc(var(--PIXEL_SIZE) * 1px);
+  height: calc(var(--PIXEL_SIZE) * 1px);
+  /* margin: 1px; */
+  background-color: #ffffff;
+  border: 2px solid #444444;
+}
+
+.input-pixel {
+  transition: 0.25s;
+}
+
+#controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+#controls button {
+  width: 150px;
+  height: calc(var(--PIXEL_SIZE) * var(--PIXEL_COUNT) * 1px);
+  height: 37.5px;
+  margin-bottom: 5px;
+  transition: 0.25s;
+}
+
+#recognize-button {
+  background:#CDDC39;
+}
+#recognize-button:hover {
+  background: #8BC34A;
+}
+
+#clear-button {
+  background: #EF9A9A;
+}
+#clear-button:hover {
+  background: #E57373;
+}
